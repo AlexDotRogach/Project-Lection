@@ -1,1 +1,3 @@
-console.log('HELLO!');
+import addNotice from './js/addNotice';
+
+addNotice();
