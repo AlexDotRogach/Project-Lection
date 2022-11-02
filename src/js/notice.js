@@ -9,6 +9,11 @@ export default class Notice {
     const keyObj = activeElement.textContent;
 
     if (this.#notice.hasOwnProperty(keyObj)) {
+      if (this.#notice[keyObj].includes(newValue)) {
+        console.log('value is in list');
+        return '';
+      }
+
       this.#notice[keyObj].push(newValue);
     } else {
       this.#notice[keyObj] = [newValue];
